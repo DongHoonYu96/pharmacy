@@ -1,0 +1,29 @@
+spring:
+  profiles:
+    active: local # default
+    group:  #같이실행할 프로파일 묶기
+      local:  #로칼실행시 공통부분도 같이 실행해라.
+        - common
+      prod:   #프로드실행시 공통부분도 같이 실행해라.
+        - common
+
+---
+spring:
+  config:
+    activate:
+      on-profile: common
+
+# ...
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: prod
