@@ -17,6 +17,10 @@ configurations {
 	}
 }
 
+bootJar{
+	archiveFileName = 'app.jar' //빌드파일의 이름변경
+}
+
 repositories {
 	mavenCentral()
 }
